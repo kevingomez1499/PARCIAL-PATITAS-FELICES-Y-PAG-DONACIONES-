@@ -41,9 +41,10 @@
 .form-donar select {
   width: 100%;
   padding: 12px;
-  font: inherit;
+  font: arial;
   border-radius: 8px;
 }
+
 .form-donar input:focus,
 .form-donar select:focus { outline: none; border-color: var(--verde-oscuro); }
 .form-donar .boton { margin-top: 24px; width: 100%; }
