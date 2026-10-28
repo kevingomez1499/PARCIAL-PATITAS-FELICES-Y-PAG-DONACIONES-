@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luna · Patitas Felices</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/adopta.css">
+</head>
+<body>
+
+  <!-- Encabezado con logo y menú -->
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="../index.html">🐾 Patitas Felices</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="adopta.html" class="activo">Adopta</a></li>
+          <li><a href="donaciones.html">Donaciones</a></li>
+          <li><a href="contacto.html">Voluntariado</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Foto y datos principales -->
+    <section class="perfil">
+      <div class="contenedor">
+        <div class="perfil-foto">
+          <img src="../storage/img/luna.jpg" alt="Luna, perra mestiza sentada en un sendero del jardín">
+          <p>Luna, disfrutando de su lugar favorito: el jardín.</p>
+        </div>
+        <div class="perfil-datos">
+          <span class="estado disponible">Disponible para adopción</span>
+          <h1>Hola, soy Luna.</h1>
+          <p class="texto-gris">Experta en paseos tranquilos, miradas tiernas y siestas cerca de ti.</p>
+
+          <!-- Características en una tabla -->
+          <table class="ficha">
+            <tr><th>Edad</th><td>2 años</td></tr>
+            <tr><th>Sexo</th><td>Hembra</td></tr>
+            <tr><th>Tamaño</th><td>Mediana</td></tr>
+            <tr><th>Raza</th><td>Mestiza</td></tr>
+          </table>
+
+          <!-- Botón no funcional (solo maqueta) -->
+          <a class="boton boton-principal" href="contacto.html">Solicitar adopción</a>
+          <p class="nota">La solicitud no es un compromiso. Es el primer paso para conocernos y resolver tus dudas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historia, salud y comportamiento -->
+    <section class="detalle seccion">
+      <div class="contenedor">
+        <h2>Su historia</h2>
+        <p class="texto-gris">Luna llegó al refugio algo tímida, pero con muchas ganas de confiar. Con paciencia, rutinas suaves y paseos al aire libre, empezó a enseñarnos su lado más curioso y cariñoso.</p>
+        <p class="texto-gris">Le encanta olfatear cada rincón del jardín y buscar una mano amiga al terminar el día. Ahora busca una familia que entienda que los mejores vínculos se construyen sin prisas.</p>
+
+        <h2>Su salud</h2>
+        <ul class="texto-gris">
+          <li>✔ Vacunación al día</li>
+          <li>✔ Desparasitada y esterilizada</li>
+          <li>✔ Identificada con microchip</li>
+          <li>✔ Revisión veterinaria favorable</li>
+        </ul>
+
+        <h2>Su comportamiento</h2>
+        <ul class="texto-gris">
+          <li>🌿 Tranquila en casa: disfruta de las rutinas y de su propio rincón de descanso.</li>
+          <li>🐾 Sociable con otros perros: los encuentros deben ser graduales.</li>
+          <li>❤️ Cariñosa, a su tiempo: necesita paciencia al conocer personas nuevas.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Llamada a la acción -->
+    <section class="banda">
+      <div class="contenedor">
+        <div>
+          <h2>¿Y si su próximo hogar es el tuyo?</h2>
+          <p class="texto-gris">Cuéntanos sobre ti. Te acompañamos en cada paso de la adopción.</p>
+        </div>
+        <a class="boton boton-principal" href="contacto.html">Solicitar adopción</a>
+      </div>
+    </section>
+
+    <!-- Animales relacionados (fila horizontal con scroll) -->
+    <section class="seccion">
+      <div class="contenedor">
+        <p class="etiqueta">OTRAS HUELLAS, OTRAS HISTORIAS</p>
+        <h2 class="titulo">También esperan conocerte.</h2>
+        <div class="relacionados">
+          <article class="tarjeta">
+            <img src="../storage/img/nala.jpg" alt="Nala, perra blanca y negra sobre el césped">
+            <div class="tarjeta-info">
+              <h3>Nala</h3>
+              <p class="texto-gris">3 años · Mediana<br>Mestiza</p>
+              <span class="estado disponible">Disponible</span>
+              <a class="boton boton-secundario" href="perfil.html">Ver perfil</a>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img src="../storage/img/milo.jpg" alt="Milo, gato naranja sobre una manta">
+            <div class="tarjeta-info">
+              <h3>Milo</h3>
+              <p class="texto-gris">1 año · Pequeño<br>Europeo</p>
+              <span class="estado disponible">Disponible</span>
+              <a class="boton boton-secundario" href="perfil.html">Ver perfil</a>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img src="../storage/img/toby.jpg" alt="Toby, perro pequeño de orejas grandes">
+            <div class="tarjeta-info">
+              <h3>Toby</h3>
+              <p class="texto-gris">4 años · Pequeño<br>Podenco mestizo</p>
+              <span class="estado disponible">Disponible</span>
+              <a class="boton boton-secundario" href="perfil.html">Ver perfil</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="pie">
+    <div class="contenedor pie-contenido">
+      <p class="pie-nombre">Patitas Felices</p>
+      <p>© 2026 Patitas Felices</p>
+      <p><a href="mailto:hola@patitasfelices.org">hola@patitasfelices.org</a></p>
+      <p><a href="#">Desarrollo: Estudio Huella</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* ===== Perfil de un animal ===== */
+
+.perfil .contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.perfil-foto img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.perfil-foto p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--gris);
+}
+
+.perfil-datos h1 {
+  font-size: 40px;
+  margin: 12px 0;
+}
+
+/* Tabla con las características */
+.ficha {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: var(--blanco);
+}
+
+.ficha th,
+.ficha td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--durazno);
+}
+
+.ficha th {
+  color: var(--gris);
+  font-weight: normal;
+  width: 40%;
+}
+
+.nota {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--gris);
+}
+
+/* Historia, salud y comportamiento */
+.detalle {
+  background: var(--blanco);
+}
+
+.detalle h2 {
+  margin: 24px 0 8px;
+}
+
+.detalle h2:first-child {
+  margin-top: 0;
+}
+
+.detalle p {
+  margin-bottom: 12px;
+}
+
+.detalle ul {
+  list-style: none;
+}
+
+.detalle li {
+  margin-bottom: 6px;
+}
+
+/* Banda de llamada a la acción */
+.banda {
+  background: var(--durazno);
+  padding: 40px 0;
+}
+
+.banda .contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Animales relacionados: fila horizontal con scroll */
+.relacionados {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+.relacionados .tarjeta {
+  flex: 0 0 240px;
+}
+
+/* ===== Media queries ===== */
+
+@media (min-width: 600px) {
+  .perfil-foto img {
+    height: 460px;
+  }
+}
+
+@media (min-width: 768px) {
+  .perfil .contenedor {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .perfil-foto,
+  .perfil-datos {
+    flex: 1;
+  }
+
+  .banda .contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .perfil-datos h1 {
+    font-size: 60px;
+  }
+
+  .perfil-foto img {
+    height: 520px;
+  }
+
+  .relacionados .tarjeta {
+    flex: 1;
+  }
+}

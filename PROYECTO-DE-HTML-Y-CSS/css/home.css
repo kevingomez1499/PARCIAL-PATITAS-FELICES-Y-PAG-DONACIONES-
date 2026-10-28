@@ -1,0 +1,257 @@
+/* ===== Página de inicio ===== */
+
+/* Banner principal */
+.banner .contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.banner h1 {
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.banner p {
+  margin-bottom: 20px;
+}
+
+.banner-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.banner img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Carrusel de fotos: cambia solo cada 3 segundos con @keyframes (sin JavaScript).
+   Hay 3 fotos y cada una dura 3 s, así que el ciclo completo dura 9 s. */
+.carrusel-seccion {
+  background: var(--blanco);
+}
+
+.carrusel {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--verde-claro);
+}
+
+.foto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: cambiar-foto 9s infinite;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foto p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--blanco);
+}
+
+/* La 2ª y la 3ª foto empiezan con retraso para que se turnen */
+.foto:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.foto:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes cambiar-foto {
+  0%   { opacity: 1; }
+  28%  { opacity: 1; }
+  33%  { opacity: 0; }
+  95%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Labor de la fundación */
+.labor {
+  background: var(--verde-claro);
+}
+
+.tarjetas-labor {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.tarjeta-labor {
+  background: var(--crema);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.tarjeta-labor .icono {
+  font-size: 28px;
+}
+
+.tarjeta-labor h3 {
+  margin: 8px 0 4px;
+}
+
+.enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Testimonios */
+.testimonios {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.testimonio {
+  background: var(--blanco);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.testimonio span {
+  font-size: 14px;
+  color: var(--gris);
+}
+
+/* Misión y visión: apiladas en celular, lado a lado desde tablet */
+.mision-vision {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bloque {
+  background: var(--durazno);
+  padding: 32px 24px;
+  border-radius: 12px;
+}
+
+.bloque .icono {
+  font-size: 32px;
+}
+
+.bloque h2 {
+  margin: 8px 0 12px;
+}
+
+/* Galería: cuadrícula con Grid */
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.galeria img:hover {
+  transform: scale(1.04);
+}
+
+.cierre {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* ===== Media queries ===== */
+
+@media (min-width: 600px) {
+  .tarjetas-labor {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galeria img {
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner .contenedor {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .banner .banner-texto,
+  .banner img {
+    flex: 1;
+  }
+
+  .carrusel {
+    height: 380px;
+  }
+
+  .testimonios,
+  .mision-vision {
+    flex-direction: row;
+  }
+
+  .testimonio,
+  .bloque {
+    flex: 1;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cierre {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner h1 {
+    font-size: 54px;
+  }
+
+  .carrusel {
+    height: 460px;
+  }
+
+  .tarjetas-labor {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
